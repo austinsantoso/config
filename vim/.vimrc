@@ -1,5 +1,9 @@
-" either create symlink 
-" or tell $HOME/.vimrc to source this file 
+" either create symlink
+# create symlink fron ~/.config/vim/.vimrc to ~/.vimrc
+#
+# from home directory
+# ln -s $XDG_CONFIG_HOME/vim/.vimrc $HOME/.vimrc
+" or tell $HOME/.vimrc to source this file
 " echo "source ~/.config/vim/.vimrc" >> ~/.vimrc
 
 " ===========================================================
@@ -80,6 +84,14 @@ nnoremap S :%s//gci<Left><Left><Left><Left>
 " indent does not get rid of visual block
 vmap > >gv
 vmap < <gv
+
+" n forward search
+" N backward search
+nnoremap <expr> n (v:searchforward ? 'n' : 'N')
+nnoremap <expr> N (v:searchforward ? 'N' : 'n')
+
+" shift + Q to run macro stored at q
+nnoremap Q @q
 
 " ========================================================
 " Directory settings for stuff

@@ -113,6 +113,11 @@ set pastetoggle=<F2>
 vmap > >gv
 vmap < <gv
 
+" n forward search
+" N backward search
+nnoremap <expr> n (v:searchforward ? 'n' : 'N')
+nnoremap <expr> N (v:searchforward ? 'N' : 'n')
+
 " shift + Q to run macro stored at q
 nnoremap Q @q
 
