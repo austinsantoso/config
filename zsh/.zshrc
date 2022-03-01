@@ -1,4 +1,5 @@
 # create symlink fron ~/.config/zsh/.zshrc to ~/.zshrc
+# from home directory
 # ln -s .config/zsh/.zshrc .zshrc
 #
 #
@@ -123,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# ZSH cos i laze 
+# ZSH cos i laze
 alias zshreload='alias ~/.zshrc'
 alias zshedit='vim ~/.zshrc'
 # alias zshconfig="mate ~/.zshrc"
