@@ -2,10 +2,12 @@
 
 .config files for certain applications
 
+Last tested on ubuntu
+
 # Applications:
 
-- ZSH
-  - [extra comments](./readme/zsh.md)
 - VIM
 - NVIM
 - TMUX
+- i3 - Tiling window manager
+
