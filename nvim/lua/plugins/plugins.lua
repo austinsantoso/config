@@ -8,6 +8,11 @@ local plugins = {
     -- Colorscheme
     'folke/tokyonight.nvim',
     lazy = false,
+    opts = { style = "storm" },
+    priority = 1000,
+    config = function()
+      vim.cmd([[colorscheme tokyonight-storm]])
+    end,
   },
   {
     -- NvimTree (file Tree)

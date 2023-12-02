@@ -45,8 +45,9 @@ opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.softtabstop = 2 -- Number of spaces tabs count for
 opt.shiftwidth = 2 -- Size of an indent
-opt.expandtab = true -- Use spaces instead of tabs
+opt.expandtab = false -- true = Use spaces instead of tabs
 opt.autoindent = true -- copy indent from current line when starting a new one
+opt.smarttab = true -- copy indent from current line when starting a new one
 
 opt.smartindent = true -- Insert indents automatically
 
@@ -65,5 +66,5 @@ opt.wrap = false -- Disable line wrap
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
-vim.cmd[[colorscheme habamax]]
+-- vim.cmd[[colorscheme tokyonight]]
 
