@@ -12,7 +12,7 @@ opt.cursorline = true -- Enable highlighting of the current line
 --opt.grepformat = "%f:%l:%c:%m"
 --opt.grepprg = "rg --vimgrep"
 
-opt.ignorecase = true -- Ignore case
+opt.ignorecase = true -- Ignore case when seaching
 opt.smartcase = true -- Don't ignore case with capitals
 opt.inccommand = "nosplit" -- preview incremental substitute
 opt.incsearch = true
@@ -26,7 +26,6 @@ opt.number = true -- Print line number
 opt.relativenumber = true -- Relative line numbers
 --opt.pumblend = 10 -- Popup blend
 --opt.pumheight = 10 -- Maximum number of entries in a popup
---
 
 opt.scrolloff = 5 -- Lines of context
 opt.winminwidth = 5 -- Minimum window width
@@ -45,7 +44,7 @@ opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.softtabstop = 2 -- Number of spaces tabs count for
 opt.shiftwidth = 2 -- Size of an indent
-opt.expandtab = false -- true = Use spaces instead of tabs
+opt.expandtab = true -- true = Use spaces instead of tabs
 opt.autoindent = true -- copy indent from current line when starting a new one
 opt.smarttab = true -- copy indent from current line when starting a new one
 
@@ -61,10 +60,12 @@ opt.undolevels = 10000
 opt.updatetime = 200 -- Save swap file and trigger CursorHold
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 
+-- backspace
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+
 opt.wrap = false -- Disable line wrap
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
 -- vim.cmd[[colorscheme tokyonight]]
-
