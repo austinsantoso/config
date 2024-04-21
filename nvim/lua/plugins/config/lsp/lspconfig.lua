@@ -18,17 +18,17 @@ return {
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
-	-- Primegan setup for reference
-  -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  -- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  -- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  -- vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  -- vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  -- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  -- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  -- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+			-- Primegan setup for reference
+			-- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+			-- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+			-- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+			-- vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+			-- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+			-- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+			-- vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+			-- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+			-- vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+			-- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 
 			-- set keybinds
 			opts.desc = "Go to definition"
@@ -90,62 +90,5 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-
-		-- configure html server
-		lspconfig["html"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure typescript server with plugin
-		lspconfig["tsserver"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure css server
-		lspconfig["cssls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure python server
-		lspconfig["pyright"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure java server
-		lspconfig["jdtls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure java server
-		lspconfig["gopls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure lua server (with special settings)
-		lspconfig["lua_ls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			settings = { -- custom settings for lua
-				Lua = {
-					-- make the language server recognize "vim" global
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = {
-						-- make language server aware of runtime files
-						library = {
-							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-							[vim.fn.stdpath("config") .. "/lua"] = true,
-						},
-					},
-				},
-			},
-		})
 	end,
 }
