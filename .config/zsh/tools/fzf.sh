@@ -1,8 +1,15 @@
+# Setup fzf
+# install using git
+# ---------
+if [[ ! "$PATH" == */home/blitzert/Projects/tools/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/blitzert/Projects/tools/fzf/bin"
+fi
+
 # Set up fzf key binding and fuzzy completion
-_evalcache fzf --zsh
+# _evalcache fzf --zsh
+eval "$(fzf --zsh)"
 
 # -- Use fd instead of fzf --
-
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
@@ -19,7 +26,9 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source $HOME/code/personal/tools/fzf-git.sh/fzf-git.sh
+# Change this to where you do
+# git clone https://github.com/junegunn/fzf-git.sh.git
+source $HOME/Projects/tools/fzf-git.sh/fzf-git.sh
 
 # install `eza` and `bat` for some nice previews
 
