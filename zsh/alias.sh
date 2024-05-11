@@ -1,1 +1,0 @@
-alias cdd='cd ..'
