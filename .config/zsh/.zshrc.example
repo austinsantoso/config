@@ -1,0 +1,15 @@
+neofetch
+
+ZSH_CONFIG_DIR=$HOME/.config/zsh
+source $ZSH_CONFIG_DIR/p10k.sh
+source $ZSH_CONFIG_DIR/alias.sh
+
+ZSH_CODE_CONFIG_DIR=$ZSH_CONFIG_DIR/code
+source $ZSH_CODE_CONFIG_DIR/golang.sh
+source $ZSH_CODE_CONFIG_DIR/pyenv.sh
+source $ZSH_CODE_CONFIG_DIR/pyenv.sh
+source $ZSH_CODE_CONFIG_DIR/sdkman.sh
+
+ZSH_TOOLS_CONFIG_DIR=$ZSH_CONFIG_DIR/tools
+source $ZSH_TOOLS_CONFIG_DIR/fzf.sh
+
